@@ -256,6 +256,15 @@ ul li a:hover {
   .action__btns {
     margin: auto;
   }
+
+  /* Social icons */
+  .github-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  opacity: 0.7;
+}
   
 
   
