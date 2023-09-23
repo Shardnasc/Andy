@@ -10,20 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Maven+Pro:wght@500;700&family=Open+Sans:ital,wght@1,400;1,500&family=Oswald&family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
    
-    <link rel="stylesheet" type= "text/css" href= "./css/main.css" >
-    <script type= "text/javascript" src= "./JavaScript/main.js"> </script>
-    <title>andy</title> 
-    <link rel="icon" href="./Media/andy.ico">
+    <link rel="stylesheet" type= "text/css" href="/css/main.css" >
+    <title>andy</title>
+    <link rel="icon" type="image/x-icon" href="/Media/andy.ico">
 
       </head>
-  <body>
+  <body class="light">
+
     <nav>
       <div class="nav__content">
         <div class="logo"><a href="#">Andy</a></div>
-                 <div class="github-icon">
-    <i class="ri-github-fill"></i>
-  </div>
- <label for="check" class="checkbox">
+        <label for="check" class="checkbox">
           <i class="ri-menu-line"></i>
         </label>
         <input type="checkbox" name="check" id="check" />
@@ -34,9 +31,15 @@
           <li><a href="#">Projects</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-      </div>
-    
-    <div class="container">
+
+       <!-- <div class="theme-toggle">
+          <i class="ri-sun-line" id="light-icon"></i>
+          <input type="checkbox" name="theme-toggle" class="toggle-switch" id="toggle-switch" />
+          <label for="toggle-switch" class="slider"></label>
+          <i class="ri-moon-line" id="dark-icon"></i>
+        </div>
+      -->
+      <div class="container">
         <i class="ri-sun-line"></i> 
         <label class="toggle-switch">
           <input type="checkbox" id="mode-toggle">
@@ -45,31 +48,34 @@
         <i class="ri-moon-line"></i> 
       </div>
     
+    
     </nav>
     <section class="section">
       <div class="section__container">
         <div class="content">
-          <div class="typewriter">
+          <div class="typewriter" id="test">
             <h1>Hello, I'm Andy.</h1>
           </div>
           <br>
           <p class="description">
             I'm a recent graduate with a major in Computer Information Systems.  
-            My sights are set on becoming a skilled front-end and software developer, drawing from my current experiences.
-            Looking to improve my technical skills in the future.
+            My sights are set on becoming a skilled frontend and software developer, drawing from my current experiences.
+            Looking to forward my technical skills in the future.
           <div class="action__btns">
-            <a href="mailto:">
+            <a href="mailto:awong4566@gmail.com">
               <button class="click_me">Click Me</button>
             </a>
           </div>          
         </div>
         <div class="image">
-          <img src="./Media/IMG_8837 (1).jpg" alt="profile" />
+          <img src="/Media/IMG_8837 (1).jpg" alt="profile" />
         </div>
       </div>
       <div class="footer">
           COPYRIGHT © ANDY WONG 2023 - CODED FROM ME
         </div>
     </section>
+    <script type= "text/javascript" src="/JavaScript/main.js"> </script>
+
   </body>
 </html>
