@@ -284,3 +284,108 @@ ul li a:hover {
   font-family: 'Kanit', 'Maven Pro', 'Open Sans', 'Oswald', 'Roboto Mono', sans-serif;
   text-align: center;
 }
+
+@media (max-width: 750px) {
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+    font-family: 'Kanit', 'Maven Pro', 'Open Sans', 'Oswald', 'Roboto Mono', sans-serif;
+    text-align: center;
+    z-index: 999; /* Added z-index to ensure it's above other content */
+  }
+}
+
+/* Dark/light theme toggle */
+
+/* Style for the sun icon */
+.ri-sun-line {
+  font-size: 24px; /* Adjust the size of the sun icon */
+  color: #140909; /* Adjust the color of the sun icon */
+  margin-right: 10px; /* Add spacing to the right of the sun icon */
+ 
+}
+
+/* Style for the moon icon */
+.ri-moon-line {
+  font-size: 24px; /* Adjust the size of the moon icon */
+  color: #000000; /* Adjust the color of the moon icon */
+  margin-left: 10px; /* Add spacing to the left of the moon icon */
+  
+}
+
+.container {
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+}
+
+/* Style for the toggle switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-inline: auto;
+  vertical-align: middle;
+  padding: 20px;
+}
+
+/* Style for the slider */
+.toggle-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background-color: #ccc;
+  transition: all 0.4s ease-in;
+  border-radius: 2.13rem;
+  width: 2.50rem;
+  height: 1.25rem;
+
+  
+}
+
+.toggle-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; /* Adjust the height of the slider knob */
+  width: 20px; /* Adjust the width of the slider knob */
+  left: 1px; /* Adjust the position of the slider knob */
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Style for the slider when checked */
+.toggle-switch input:checked + .slider {
+  background-color: #21dbf3;
+}
+
+/* Style for the slider knob when checked */
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(20px); /* Adjust the position when checked */
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #f0f0f0;
+  transition: all 0.4s ease-in;
+}
+
+body.dark-mode nav {
+  background-color: #333; /* Change this to your desired background color */
+  color: #f0f0f0; /* Change this to your desired text color */
+}
+
+.dark-mode h1,
+.dark-mode .click_me {
+  color: white;
+}
