@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Maven+Pro:wght@500;700&family=Open+Sans:ital,wght@1,400;1,500&family=Oswald&family=Roboto+Mono:wght@600;700&display=swap');
 /*primary use of parent element */
-:root {
-  --primary-color: #0c0314;
-  --primary-color-dark: #465861;
-  --secondary-color: #0c0c0b;
-  --text-dark: #020305;
-  --text-light: #0d0d0e;
-  --extra-light: #e5e3e7;
-  --max-width: 1200px;
-}
 
 * {
   padding: 0;
