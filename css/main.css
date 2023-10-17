@@ -1,14 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Maven+Pro:wght@500;700&family=Open+Sans:ital,wght@1,400;1,500&family=Oswald&family=Roboto+Mono:wght@600;700&display=swap');
 /*primary use of parent element */
-:root {
-  --primary-color: #0c0314;
-  --primary-color-dark: #465861;
-  --secondary-color: #0c0c0b;
-  --text-dark: #020305;
-  --text-light: #0d0d0e;
-  --extra-light: #e5e3e7;
-  --max-width: 1200px;
-}
+
+
 
 * {
   padding: 0;
@@ -26,19 +19,38 @@ body {
   
 }
 
+.custom-section {
+  margin-bottom: 300px;
+  padding-bottom: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Typewriter effect */
 
 .typewriter h1 {
   color: #000000;
   font-family: 'Kanit', 'Maven Pro', 'Open Sans', 'Oswald', 'Roboto Mono', sans-serif;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .25em solid rgb(13, 236, 225); /* The typwriter cursor */
+  border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin-left: 0.1em; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .10em; /* Adjust as needed */
+  letter-spacing: .2em; /* Adjust as needed */
   animation: 
     typing 3.5s steps(16, end),
     blink-caret 0.5s step-end infinite;
+  
+  
 }
 
 
@@ -52,8 +64,8 @@ body {
 
 /* Cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: rgb(8, 233, 203) }
+  from, to { border-color: transparent; margin-right: 0;}
+  50% { border-color: rgb(0, 0, 0); margin-right: 0.05em; }
 }
 
 @keyframes typewriter{
@@ -61,7 +73,7 @@ body {
   to{width: 1em;}
 }
 
-
+/* Nav Bar */
 
 nav {
   width: 100%;
@@ -189,8 +201,9 @@ ul li a:hover {
   letter-spacing: 2px;
   padding: 1rem 2rem;
   outline: none;
-  border: 2px solid var(--primary-color);
+  border: 2px solid rgb(136, 141, 204);
   border-radius: 10px;
+  transition: background-color 0.3s; 
   transition: 0.3s;
   cursor: pointer;
   font-family: 'Kanit', 'Maven Pro', 'Open Sans', 'Oswald', 'Roboto Mono', sans-serif;
@@ -198,14 +211,19 @@ ul li a:hover {
 
 .click_me {
   background-color: var(--primary-color);
-  color: #ececec;
+  color: #020202;
 }
 
+
+/* Change the background color on hover */
 .click_me:hover {
   background-color: var(--primary-color-dark);
+  color: #30e1e7; /* Change the text color when hovering */
 }
 
-
+.click_me:hover:active {
+  background-color: var(--primary-color-dark); /* Keep the hover background color during click */
+}
 
 .image {
   display: grid;
@@ -217,9 +235,53 @@ ul li a:hover {
   border-radius: 100%;
 }
 /* Mobile viewing */
-@media (width < 750px) {
+@media (max-width: 750px) {
   nav .checkbox {
     display: block;
+  }
+
+  .checkbox label {
+    position: relative;
+    cursor: pointer;
+    z-index: 99; /* Ensure the label is above the overlay */
+  }
+
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ensure the overlay covers the entire viewport */
+    z-index: 98; /* Place it just below the navigation menu */
+    display: none; /* Initially hide the overlay */
+  }
+
+  .checkbox input:checked + .nav-overlay {
+    display: block; /* Show the overlay when the mobile menu is checked */
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+  }
+
+  body.dark-mode .nav {
+    background-color: #333; /* Change this to your desired background color in dark mode */
+    color: #f0f0f0; /* Change this to your desired text color in dark mode */
+  }
+
+  body.dark-mode .nav .logo a {
+    color: var(--primary-color-dark); /* Change the logo text color in dark mode */
+  }
+  
+  body.dark-mode .nav .checkbox i {
+    color: var(--primary-color-dark); /* Change the menu bar symbol color in dark mode */
+  }
+  
+  body.dark-mode ul li a {
+    color: #f0f0f0; /* Change the menu item text color in dark mode */
+  }
+
+  body.dark-mode ul li a:hover {
+    border-top-color: var(--primary-color); /* Change the menu item hover border color in dark mode */
+    border-bottom-color: var(--primary-color); /* Change the menu item hover border color in dark mode */
+    color: var(--primary-color); /* Change the menu item hover text color in dark mode */
   }
 
   ul {
@@ -228,7 +290,7 @@ ul li a:hover {
     height: calc(100vh - 85px);
     left: -100%;
     top: 85px;
-    background-color: var(--extra-light);
+    background-color: white;
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
@@ -263,7 +325,7 @@ ul li a:hover {
 
 /* footer */
 .footer {
-  position: fixed;
+
   bottom: 0;
   left: 0;
   right: 0;
@@ -274,3 +336,163 @@ ul li a:hover {
   font-family: 'Kanit', 'Maven Pro', 'Open Sans', 'Oswald', 'Roboto Mono', sans-serif;
   text-align: center;
 }
+
+
+/* Dark/light theme toggle */
+
+/* Style for the sun icon */
+.ri-sun-line {
+  font-size: 24px; /* Adjust the size of the sun icon */
+  color: #140909; /* Adjust the color of the sun icon */
+  margin-right: 10px; /* Add spacing to the right of the sun icon */
+ 
+}
+
+/* Style for the moon icon */
+.ri-moon-line {
+  font-size: 24px; /* Adjust the size of the moon icon */
+  color: #000000; /* Adjust the color of the moon icon */
+  margin-left: 10px; /* Add spacing to the left of the moon icon */
+  
+}
+
+.container {
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+}
+
+/* Style for the toggle switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-inline: auto;
+  vertical-align: middle;
+  padding: 20px;
+}
+
+/* Style for the slider */
+.toggle-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background-color: #ccc;
+  transition: all 0.4s ease-in;
+  border-radius: 2.13rem;
+  width: 2.50rem;
+  height: 1.25rem;
+
+  
+}
+
+.toggle-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; /* Adjust the height of the slider knob */
+  width: 20px; /* Adjust the width of the slider knob */
+  left: 1px; /* Adjust the position of the slider knob */
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Style for the slider when checked */
+.toggle-switch input:checked + .slider {
+  background-color: #21dbf3;
+}
+
+/* Style for the slider knob when checked */
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(20px); /* Adjust the position when checked */
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #f0f0f0;
+  transition: all 0.4s ease-in;
+}
+
+body.dark-mode nav {
+  background-color: #333; /* Change this to your desired background color */
+  color: #f0f0f0; /* Change this to your desired text color */
+}
+
+.dark-mode h1,
+.dark-mode .click_me {
+  color: white;
+}
+
+/* Initial styles for animated elements */
+.fade-and-slide {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animation class */
+.fade-and-slide.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Loading screen container */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; /* Background color of the loading screen */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it's above other content */
+}
+
+/* Loading header */
+.loader-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Loading bar */
+.loader {
+  width: 100%; 
+  height: 10px; 
+  background-color: #000000; 
+  transition: width 2s ease-in-out; /* Transition for smooth progress */
+  animation: moveLeft 8s linear infinite; /* Animation to move the loading bar to the left */
+}
+
+@keyframes moveLeft {
+  0% {
+    width: 100%; /* Start with full width */
+  }
+  100% {
+    width: 0%; /* End with no width (completely left) */
+  }
+}
+  
+
+/* Example to move the flex grid down */
+  .container {
+    margin-top: 20px; /* Move the container down by 20 pixels */
+  }
+  
+  /* Example to move the flex grid up */
+  .container {
+    margin-bottom: 20px; /* Move the container up by 20 pixels */
+  }
+
+
+
+
+
+
+

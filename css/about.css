@@ -1,0 +1,80 @@
+:root {
+    --primary-background-light: #f9f9f9;
+    --primary-background-dark: #333;
+    --text-color-light: #000;
+    --text-color-dark: #fff;
+  }
+  
+
+/* About Me section */
+.about-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  /* About Me header */
+  .about-section h2 {
+    font-size: 24px;
+    font-family:'Kanit', 'Maven Pro', 'Open Sans', 'Oswald', 'Roboto Mono', sans-serif;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Flexbox container for profile image and text */
+  .about-content {
+    display: flex;
+    flex-direction: row; /* Stack elements vertically on small screens */
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    width: 80%;
+    height: 500px;
+  }
+  
+  /* Increase the image size */
+  .about-content img {
+  width: 200px; /* Set your desired width */
+  height: 300px; /* Set your desired height */
+  border-radius: 50%; /* Create a circular profile picture */
+  }
+
+  
+  /* About Me text */
+  .about-text {
+    font-size: 20px;
+    font-family: 'Kanit', 'Maven Pro', 'Open Sans', 'Oswald', 'Roboto Mono', sans-serif;
+    text-align: left; /* Align text to the left */
+    max-width: 60%; /* Limit text width for readability */
+  }
+  
+  /* Adjust text styles (font size, margin, etc.) as needed */
+  .about-text p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  /* About Me section */
+.about-section {
+    background-color: var(--primary-background-light); /* Use the variable */
+    color: var(--text-color-light); /* Use the variable */
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Adjust the same properties for dark mode */
+  body.dark-mode .about-section {
+    background-color: var(--primary-background-dark); /* Use the variable */
+    color: var(--text-color-dark); /* Use the variable */
+  }
+
+  
+  
+
+
+  
+  
+  

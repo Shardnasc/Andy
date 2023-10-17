@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,12 +13,14 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
    
     <link rel="stylesheet" type= "text/css" href="/css/main.css" >
-    <script type= "text/javascript" src="/JavaScript/main.js"> </script>
+    <link rel="stylesheet" type= "text/css" href="/css/about.css" >
+    <link rel="stylesheet" type= "text/css" href="/css/projects.css" >
     <title>andy</title>
     <link rel="icon" type="image/x-icon" href="/Media/andy.ico">
 
       </head>
-  <body>
+  <body class="light">
+
     <nav>
       <div class="nav__content">
         <div class="logo"><a href="#">Andy</a></div>
@@ -25,18 +29,33 @@
         </label>
         <input type="checkbox" name="check" id="check" />
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Resume</a></li>
-          <li><a href="#">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
+
+       <!-- <div class="theme-toggle">
+          <i class="ri-sun-line" id="light-icon"></i>
+          <input type="checkbox" name="theme-toggle" class="toggle-switch" id="toggle-switch" />
+          <label for="toggle-switch" class="slider"></label>
+          <i class="ri-moon-line" id="dark-icon"></i>
+        </div>
+      -->
+      <div class="container">
+        <i class="ri-sun-line"></i> 
+        <label class="toggle-switch">
+          <input type="checkbox" id="mode-toggle">
+          <span class="slider"></span> 
+        </label>
+        <i class="ri-moon-line"></i> 
       </div>
+    
+    
     </nav>
     <section class="section">
       <div class="section__container">
         <div class="content">
-          <div class="typewriter">
+          <div class="typewriter" id="test">
             <h1>Hello, I'm Andy.</h1>
           </div>
           <br>
@@ -50,13 +69,85 @@
             </a>
           </div>          
         </div>
-        <div class="image">
-          <img src="/Media/IMG_8837 (1).jpg" alt="profile" />
-        </div>
+        
       </div>
-      <div class="footer">
+      </section>
+      
+      <section id= "about" class="about-section">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Hi, I'm Andy, a recent graduate with a passion for web development and programming.
+              I love creating user-friendly and interactive websites that make a positive impact.
+            </p>
+            <p>
+              In my free time, I enjoy learning new technologies, working on personal projects,
+              and solving coding challenges. 
+            </p>
+            </div>
+            <div>
+              <img src="/Media/IMG_8837 (1).jpg" alt="profile" />
+            </div>
+            </div>
+      </section>
+      
+  
+     
+      
+
+          
+      <section class="scrolling-section custom-section">
+        <div class="scrolling-content fade-and-slide">
+          <h2>Scrolling Section</h2>
+          <p>This is some additional content that you want to include in a scrolling section.</p>
+        </div>
+      </section>
+
+      <section id= "projects" class="projects-section">
+        <h2>Projects</h2>
+      
+        <div class="projects-container">
+          <div class="project">
+            <img src="/Media/starbucks UI.png" alt="Project 1 Screenshot">
+            <h3>Starbucks Date Dotting App</h3>
+            <p>The Starbucks Date Dotting App is a time-saving and precision-enhancing tool designed for Starbucks baristas. </p>
+            <a href="https://emich0-my.sharepoint.com/:w:/g/personal/awong5_emich_edu/EUZKFpLXmqlGoC8iETWcR-0BxsUID2wcGDxzPoWUSXpIrg?e=UkVH4b" target="_blank">Starbucks Date Dotting App</a>
+          </div>
+      
+          <div class="project">
+            <img src="path_to_screenshot_image2.jpg" alt="Project 2 Screenshot">
+            <h3>WeatherApp</h3>
+            <p>Displays the weather in your area</p>
+            <a href="https://github.com/Shardnasc/weather-app" target="_blank">WeatherApp</a>
+          </div>
+      
+          <div class="project">
+            <img src="path_to_screenshot_image3.jpg" alt="Project 3 Screenshot">
+            <h3>Project 3 Title</h3>
+            <p>Brief description of Project 3.</p>
+            <a href="link_to_github_repo3" target="_blank">GitHub Repository</a>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+      
+
+
+    
+      
+    <div class="footer">
           COPYRIGHT © ANDY WONG 2023 - CODED FROM ME
         </div>
-    </section>
+        <div class="loader-container">
+          <h2>Loading</h2>
+          <div class="loader"></div>
+        </div>
+        
+        
+    <script type= "text/javascript" src="/JavaScript/main.js"> </script>
+
   </body>
 </html>
